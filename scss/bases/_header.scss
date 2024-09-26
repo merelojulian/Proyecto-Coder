@@ -1,0 +1,56 @@
+@import "../utilidades/variables";
+@import "../utilidades/extend";
+
+/*Estilos Header y Nav*/
+header {
+    background-color: $color-background;
+    color: $color-texto;
+
+    .logo {
+        display: flex;
+
+        .navbar-brand {
+            font-weight: 600;
+
+            img {
+                width: 15%;
+            }
+        }
+
+        .navbar-toggler {
+            background-color: $color-contraste;
+            opacity: 0.7;
+        }
+    }
+
+
+    .navbar-brand,
+    .nav-link,
+    .dropdown-item {
+        color: $color-texto;
+
+        &:hover {
+            @extend %hover-contraste;
+        }
+    }
+
+    .dropdown-item {
+        &:active {
+            color: whitesmoke;
+        }
+    }
+
+    .links {
+        justify-content: right;
+        margin-right: 2rem;
+
+        .dropdown-menu {
+            background-color: $color-background;
+            opacity: 0.8;
+            color: $color-texto;
+
+        }
+
+    }
+
+}

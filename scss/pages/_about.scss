@@ -1,0 +1,137 @@
+@import "../utilidades/extend";
+@import "../utilidades/variables";
+
+/*ESTILOS DE ABOUT PAGE*/
+
+/*estilos about page movil*/
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    .about-img {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        object-fit: cover;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        img {
+            width: 50%;
+            border: 4px solid white;
+        }
+    }
+
+    .about-info {
+        padding: 1rem;
+
+        p {
+            line-height: 1.1rem;
+        }
+    }
+
+    .about-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        a {
+            color: $color-texto;
+        }
+
+        .button {
+            background-color: black;
+            padding: 1rem;
+
+            &:hover {
+                @extend %hover-about-button;
+            }
+        }
+
+
+    }
+}
+
+.facts {
+    display: inline-block;
+    padding: 2rem;
+
+    .facts-title h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .facts-txt {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 0.5fr);
+        font-size: 1rem;
+
+        span {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}
+
+/*estilos about page tablet*/
+
+@media screen and (min-width:600px) {
+    .about-container {
+        .about-info p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .facts {
+        display: flex;
+        flex-direction: column;
+
+        .facts-title h2 {
+            font-size: 1.7rem;
+            margin: 3rem 0 2rem 0;
+        }
+
+        .facts-txt {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 0.6fr);
+            column-gap: 1rem;
+            padding: 2rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/* estilos about page desktop */
+@media screen and (min-width:1024px) {
+    .about-container {
+        .about-img img {
+            width: 25%;
+        }
+
+        .about-info {
+            padding: 2rem;
+            margin: 0 2rem;
+        }
+    }
+
+    .facts {
+        .facts-txt {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            align-self: center;
+            column-gap: 2rem;
+        }
+    }
+}
