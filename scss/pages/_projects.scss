@@ -9,16 +9,18 @@
     display: grid;
     align-content: center;
     justify-content: space-between;
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
     width: 100%;
 
-    h1 {
-        font-weight: 600;
-        font-size: 2.5rem;
-        text-align: center;
-        padding: 1rem;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 0.5px;
+    .title-projects {
+        @extend %title;
+
+        h1,
+        span {
+            font-size: 2rem;
+        }
+
+        margin: 2rem 0 -4rem;
     }
 
     h2 {
@@ -57,21 +59,7 @@
             }
 
             .btn2 {
-                display: flex;
-                justify-content: center;
-                margin: 1rem auto;
-                width: 30%;
-                color: black;
-                padding: 0.5rem;
-                border: 1px solid black;
-                box-shadow: 1px 1px 10px black;
-                font-weight: 500;
-
-                &:hover {
-                    background-color: #E3913D;
-                    transition: 0.5s;
-                    margin-top: 2rem;
-                }
+                @extend %projects-button;
             }
         }
     }
@@ -105,21 +93,7 @@
             }
 
             .btn2 {
-                display: flex;
-                justify-content: center;
-                margin: 1rem auto;
-                width: 30%;
-                color: black;
-                padding: 0.5rem;
-                border: 1px solid black;
-                box-shadow: 1px 1px 10px black;
-                font-weight: 500;
-
-                &:hover {
-                    background-color: #E3913D;
-                    transition: 0.5s;
-                    margin-top: 2rem;
-                }
+                @extend %projects-button;
             }
         }
     }
@@ -134,7 +108,17 @@
 
     .projects {
         margin-bottom: 7rem;
+        .title-projects {
+            h1,
+            span {
+                font-size: 3rem;
+            }
 
+        }
+
+        h2 {
+            margin-top: 5rem;
+        }
 
         .comics {
             grid-template-columns: repeat(2, 1fr);
@@ -142,6 +126,8 @@
             row-gap: 3rem;
 
             .comic-img {
+                margin-bottom: -10px;
+
                 img {
                     width: 85%;
                     align-self: center;
@@ -160,6 +146,8 @@
             row-gap: 3rem;
 
             .movie-img {
+                margin-bottom: -10px;
+
                 img {
                     width: 85%;
                     align-self: center;
@@ -179,6 +167,7 @@
 @media screen and (min-width:1024px) {
 
     .projects {
+        
         .comics {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -193,7 +182,6 @@
             }
 
             .btn2 {
-
                 width: 30%;
             }
         }
