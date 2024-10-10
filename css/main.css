@@ -71,6 +71,7 @@ footer .footer-socials a:hover {
 .projects .movies .movie .btn2, .projects .comics .comic .btn2 {
   display: flex;
   justify-content: center;
+  background-color: rgb(10, 10, 30);
   margin: 1rem auto;
   width: 30%;
   color: black;
@@ -183,6 +184,7 @@ footer .footer-socials a:hover {
 .projects .movies .movie .btn2, .projects .comics .comic .btn2 {
   display: flex;
   justify-content: center;
+  background-color: rgb(10, 10, 30);
   margin: 1rem auto;
   width: 30%;
   color: black;
@@ -327,6 +329,7 @@ footer .footer-socials a:hover {
 .projects .movies .movie .btn2, .projects .comics .comic .btn2 {
   display: flex;
   justify-content: center;
+  background-color: rgb(10, 10, 30);
   margin: 1rem auto;
   width: 30%;
   color: black;
@@ -454,6 +457,7 @@ footer .footer-socials a:hover {
 .projects .movies .movie .btn2, .projects .comics .comic .btn2 {
   display: flex;
   justify-content: center;
+  background-color: rgb(10, 10, 30);
   margin: 1rem auto;
   width: 30%;
   color: black;
@@ -967,6 +971,7 @@ footer .footer-socials a:hover {
 .projects .movies .movie .btn2, .projects .comics .comic .btn2 {
   display: flex;
   justify-content: center;
+  background-color: rgb(10, 10, 30);
   margin: 1rem auto;
   width: 30%;
   color: black;
