@@ -92,16 +92,20 @@ header {
 }
 header .logo {
   display: flex;
+  align-items: center;
 }
 header .logo .navbar-brand {
+  justify-content: space-between;
   font-weight: 600;
+  padding: 0;
 }
 header .logo .navbar-brand img {
-  width: 15%;
+  width: 20%;
 }
 header .logo .navbar-toggler {
   background-color: #E3913D;
-  opacity: 0.7;
+  opacity: 0.8;
+  font-size: 0.8rem;
 }
 header .navbar-brand,
 header .nav-link,
@@ -114,6 +118,8 @@ header .dropdown-item:active {
 header .links {
   justify-content: right;
   margin-right: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
 }
 header .links .dropdown-menu {
   background-color: black;
@@ -121,6 +127,11 @@ header .links .dropdown-menu {
   color: whitesmoke;
 }
 
+@media screen and (min-width: 600px) {
+  .logo .navbar-toggler {
+    padding: 0.8rem 0.9rem;
+  }
+}
 header .navbar-brand:hover,
 header .nav-link:hover,
 header .dropdown-item:hover {
@@ -244,9 +255,6 @@ footer .copyright .creditos span {
 
 /*estilos footer tablet*/
 @media screen and (min-width: 600px) {
-  footer {
-    margin-top: 3rem;
-  }
   footer .footer-text {
     font-size: 0.95rem;
   }
@@ -334,7 +342,7 @@ footer .footer-socials a:hover {
 }
 
 /*Estilos de Home*/
-.hero {
+.batman {
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -344,54 +352,53 @@ footer .footer-socials a:hover {
   justify-content: center;
   color: #A98B84;
 }
-.hero img {
+.batman img {
   position: absolute;
-  margin-top: -5rem;
   inset: 0;
   display: block;
   width: 100%;
-  height: 120%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 }
-.hero .container {
+.batman .container {
   position: relative;
   line-height: 0.5rem;
 }
-.hero h1 {
+.batman h1 {
   margin: 0;
   font-size: 3rem;
   font-weight: 700;
 }
-.hero p {
+.batman p {
   margin: 0.313rem 0 0 0;
   font-size: 1.3rem;
 }
-.hero p span {
+.batman p span {
   letter-spacing: 1px;
 }
 @media screen and (min-width: 600px) {
-  .hero .navbar-brand {
+  .batman .navbar-brand {
     display: initial;
   }
-  .hero .hero h1 {
+  .batman .batman .container h1 {
     font-size: 5rem;
   }
-  .hero .hero p {
+  .batman .batman .container p {
     font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .hero .navbar-brand {
+  .batman .navbar-brand {
     display: none;
   }
-  .hero .hero .container {
+  .batman .batman .container {
     line-height: 1rem;
   }
-  .hero .hero h1 {
+  .batman .batman .container h1 {
     font-size: 4rem;
   }
-  .hero .hero p {
+  .batman .batman .container p {
     font-size: 2.2rem;
   }
 }
@@ -837,7 +844,6 @@ footer .footer-socials a:hover {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  margin-bottom: -3rem;
 }
 .main-allies .cards-container {
   display: grid;
@@ -885,6 +891,9 @@ footer .footer-socials a:hover {
 
 /* estilos allies y villains page tablet */
 @media screen and (min-width: 600px) {
+  .main-allies {
+    margin-bottom: 1rem;
+  }
   .main-allies .cards-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr;

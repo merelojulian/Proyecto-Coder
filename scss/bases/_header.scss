@@ -6,20 +6,25 @@ header {
     background-color: $color-background;
     color: $color-texto;
 
+
     .logo {
         display: flex;
+        align-items: center;
 
         .navbar-brand {
+            justify-content: space-between;
             font-weight: 600;
+            padding: 0;
 
             img {
-                width: 15%;
+                width: 20%;
             }
         }
 
         .navbar-toggler {
             background-color: $color-contraste;
-            opacity: 0.7;
+            opacity: 0.8;
+            font-size: 0.8rem;
         }
     }
 
@@ -43,14 +48,27 @@ header {
     .links {
         justify-content: right;
         margin-right: 2rem;
+        padding: 1rem;
+        font-size: 1.2rem;
 
         .dropdown-menu {
             background-color: $color-background;
             opacity: 0.8;
             color: $color-texto;
-
         }
 
     }
+
+}
+
+@media screen and (min-width:600px) {
+
+
+    .logo {
+        .navbar-toggler {
+            padding: 0.8rem 0.9rem;
+        }
+    }
+
 
 }
